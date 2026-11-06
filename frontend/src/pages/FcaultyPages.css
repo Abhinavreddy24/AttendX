@@ -1,0 +1,890 @@
+/* =========================================================
+   FACULTY REPORTS
+   ========================================================= */
+
+.faculty-reports-page {
+  min-height: 100vh !important;
+  width: 100% !important;
+  background: #f6f8fc !important;
+  color: #172033 !important;
+  padding: 0 !important;
+}
+
+.faculty-reports-container {
+  width: min(1250px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+  padding: 30px 0 50px !important;
+}
+
+.faculty-reports-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin-bottom: 28px !important;
+}
+
+.faculty-reports-back,
+.faculty-reports-refresh {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 11px 17px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  cursor: pointer !important;
+}
+
+.faculty-reports-back {
+  background: #ffffff !important;
+  border: 1px solid #dfe5ee !important;
+  color: #374151 !important;
+}
+
+.faculty-reports-refresh {
+  background: #2563eb !important;
+  border: 1px solid #2563eb !important;
+  color: #ffffff !important;
+}
+
+.faculty-reports-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin-bottom: 25px !important;
+}
+
+.faculty-reports-title-icon {
+  width: 55px !important;
+  height: 55px !important;
+  min-width: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 14px !important;
+  background: #eff6ff !important;
+  color: #2563eb !important;
+}
+
+.faculty-reports-title h1 {
+  margin: 0 !important;
+  font-size: 30px !important;
+  color: #172033 !important;
+}
+
+.faculty-reports-title p {
+  margin: 6px 0 0 !important;
+  color: #687386 !important;
+  font-size: 14px !important;
+}
+
+.faculty-reports-filter {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 15px !important;
+  margin-bottom: 24px !important;
+}
+
+.faculty-report-filter-item {
+  min-height: 72px !important;
+  padding: 16px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e9f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05) !important;
+}
+
+.faculty-report-filter-item > svg {
+  color: #2563eb !important;
+}
+
+.faculty-report-filter-item span {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #7b8494 !important;
+  font-size: 12px !important;
+}
+
+.faculty-report-filter-item strong {
+  display: block !important;
+  color: #172033 !important;
+}
+
+.faculty-reports-stats {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 18px !important;
+  margin-bottom: 24px !important;
+}
+
+.faculty-report-stat-card {
+  min-height: 120px !important;
+  padding: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e9f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05) !important;
+}
+
+.faculty-report-stat-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 13px !important;
+  background: #eff6ff !important;
+  color: #2563eb !important;
+}
+
+.faculty-report-stat-card.present .faculty-report-stat-icon {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+}
+
+.faculty-report-stat-card.absent .faculty-report-stat-icon {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+.faculty-report-stat-card.percentage .faculty-report-stat-icon {
+  background: #f1edff !important;
+  color: #7252b8 !important;
+}
+
+.faculty-report-stat-card span {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: #687386 !important;
+  font-size: 13px !important;
+}
+
+.faculty-report-stat-card h2 {
+  margin: 0 !important;
+  color: #172033 !important;
+  font-size: 28px !important;
+}
+
+.faculty-reports-section {
+  background: #ffffff !important;
+  border: 1px solid #e5e9f0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.05) !important;
+  overflow: hidden !important;
+}
+
+.faculty-reports-section-header {
+  padding: 21px 24px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+}
+
+.faculty-reports-section-header h2 {
+  margin: 0 !important;
+  color: #172033 !important;
+  font-size: 19px !important;
+}
+
+.faculty-reports-section-header p {
+  margin: 5px 0 0 !important;
+  color: #687386 !important;
+  font-size: 13px !important;
+}
+
+.faculty-reports-table-wrapper {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.faculty-reports-table {
+  width: 100% !important;
+  min-width: 850px !important;
+  border-collapse: collapse !important;
+}
+
+.faculty-reports-table th {
+  padding: 14px 18px !important;
+  background: #f8fafc !important;
+  color: #687386 !important;
+  border-bottom: 1px solid #e5e9f0 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+}
+
+.faculty-reports-table td {
+  padding: 15px 18px !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #edf0f5 !important;
+  font-size: 14px !important;
+}
+
+.faculty-reports-table tbody tr:hover td {
+  background: #f8fafc !important;
+}
+
+.report-present {
+  color: #15803d !important;
+  font-weight: 750 !important;
+}
+
+.report-absent {
+  color: #dc2626 !important;
+  font-weight: 750 !important;
+}
+
+.report-percentage {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.report-progress {
+  width: 90px !important;
+  height: 7px !important;
+  overflow: hidden !important;
+  background: #e7ebf1 !important;
+  border-radius: 20px !important;
+}
+
+.report-progress span {
+  display: block !important;
+  height: 100% !important;
+  background: #2563eb !important;
+  border-radius: 20px !important;
+}
+
+.faculty-reports-empty {
+  min-height: 280px !important;
+  padding: 50px 25px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background: #ffffff !important;
+}
+
+.faculty-reports-empty h3 {
+  color: #172033 !important;
+}
+
+.faculty-reports-empty p {
+  color: #687386 !important;
+}
+
+
+/* =========================================================
+   SUSPICIOUS ATTEMPTS
+   ========================================================= */
+
+.faculty-suspicious-page {
+  min-height: 100vh !important;
+  width: 100% !important;
+  background: #f6f8fc !important;
+  color: #172033 !important;
+  padding: 0 !important;
+}
+
+.faculty-suspicious-container {
+  width: min(1250px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+  padding: 30px 0 50px !important;
+}
+
+.faculty-suspicious-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin-bottom: 28px !important;
+}
+
+.faculty-suspicious-back,
+.faculty-suspicious-refresh {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 11px 17px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  cursor: pointer !important;
+}
+
+.faculty-suspicious-back {
+  background: #ffffff !important;
+  border: 1px solid #dfe5ee !important;
+  color: #374151 !important;
+}
+
+.faculty-suspicious-refresh {
+  background: #d8661d !important;
+  border: 1px solid #d8661d !important;
+  color: #ffffff !important;
+}
+
+.faculty-suspicious-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin-bottom: 25px !important;
+}
+
+.faculty-suspicious-title-icon {
+  width: 55px !important;
+  height: 55px !important;
+  min-width: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 14px !important;
+  background: #fff1e7 !important;
+  color: #d8661d !important;
+}
+
+.faculty-suspicious-title h1 {
+  margin: 0 !important;
+  font-size: 30px !important;
+  color: #172033 !important;
+}
+
+.faculty-suspicious-title p {
+  margin: 6px 0 0 !important;
+  color: #687386 !important;
+}
+
+.faculty-suspicious-summary {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 18px !important;
+  margin-bottom: 24px !important;
+}
+
+.faculty-suspicious-stat {
+  min-height: 120px !important;
+  padding: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e9f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05) !important;
+}
+
+.faculty-suspicious-stat-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 13px !important;
+  background: #fff1e7 !important;
+  color: #d8661d !important;
+}
+
+.faculty-suspicious-stat span {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: #687386 !important;
+  font-size: 13px !important;
+}
+
+.faculty-suspicious-stat h2 {
+  margin: 0 !important;
+  color: #172033 !important;
+  font-size: 28px !important;
+}
+
+.faculty-suspicious-section {
+  background: #ffffff !important;
+  border: 1px solid #e5e9f0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.05) !important;
+  overflow: hidden !important;
+}
+
+.faculty-suspicious-section-header {
+  padding: 21px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid #edf0f5 !important;
+}
+
+.faculty-suspicious-section-header h2 {
+  margin: 0 !important;
+  color: #172033 !important;
+  font-size: 19px !important;
+}
+
+.faculty-suspicious-section-header p {
+  margin: 5px 0 0 !important;
+  color: #687386 !important;
+}
+
+.faculty-suspicious-live {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 11px !important;
+  border-radius: 8px !important;
+  background: #fff1e7 !important;
+  color: #c45d18 !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+}
+
+.faculty-suspicious-live span {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #d8661d !important;
+}
+
+.faculty-suspicious-table-wrapper {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.faculty-suspicious-table {
+  width: 100% !important;
+  min-width: 950px !important;
+  border-collapse: collapse !important;
+}
+
+.faculty-suspicious-table th {
+  padding: 14px 18px !important;
+  background: #f8fafc !important;
+  color: #687386 !important;
+  border-bottom: 1px solid #e5e9f0 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+}
+
+.faculty-suspicious-table td {
+  padding: 15px 18px !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #edf0f5 !important;
+  font-size: 14px !important;
+}
+
+.faculty-suspicious-table tbody tr:hover td {
+  background: #fffaf6 !important;
+}
+
+.suspicious-student {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.suspicious-user-icon {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9px !important;
+  background: #f0f2f6 !important;
+  color: #697586 !important;
+}
+
+.suspicious-reason {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  color: #c45d18 !important;
+  font-weight: 600 !important;
+}
+
+.suspicious-location,
+.suspicious-time {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #667085 !important;
+}
+
+.suspicious-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 6px 10px !important;
+  border-radius: 999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.suspicious-status.suspicious-location {
+  background: #fff1e7 !important;
+  color: #c45d18 !important;
+}
+
+.suspicious-status.suspicious-duplicate {
+  background: #fff0f0 !important;
+  color: #c62828 !important;
+}
+
+.suspicious-status.suspicious-qr {
+  background: #fff8df !important;
+  color: #a46b00 !important;
+}
+
+.suspicious-status.suspicious-other {
+  background: #f0f2f6 !important;
+  color: #596579 !important;
+}
+
+.faculty-suspicious-empty {
+  min-height: 300px !important;
+  padding: 50px 25px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background: #ffffff !important;
+}
+
+.faculty-suspicious-empty svg {
+  color: #d8661d !important;
+}
+
+.faculty-suspicious-empty.success svg {
+  color: #159968 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .faculty-reports-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .faculty-suspicious-summary {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .faculty-reports-container,
+  .faculty-suspicious-container {
+    width: calc(100% - 28px) !important;
+    padding-top: 20px !important;
+  }
+
+  .faculty-reports-filter {
+    grid-template-columns: 1fr !important;
+  }
+
+  .faculty-reports-stats,
+  .faculty-suspicious-summary {
+    grid-template-columns: 1fr !important;
+  }
+
+  .faculty-reports-topbar,
+  .faculty-suspicious-topbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .faculty-reports-back,
+  .faculty-reports-refresh,
+  .faculty-suspicious-back,
+  .faculty-suspicious-refresh {
+    width: 100% !important;
+  }
+
+  .faculty-reports-section-header,
+  .faculty-suspicious-section-header {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+}
+/* =========================================================
+   ATTENDANCE REPORTS - HEALTH SECTION
+========================================================= */
+
+.faculty-reports-health {
+  margin-top: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.faculty-reports-health-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.faculty-reports-health-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+}
+
+.faculty-reports-health-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.faculty-reports-health-header p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.faculty-reports-health-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.faculty-reports-health-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.faculty-reports-health-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.faculty-reports-health-small-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-reports-health-card span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.faculty-reports-health-card strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.faculty-reports-health-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Low attendance */
+
+.faculty-reports-health-card.low {
+  border-left: 4px solid #dc2626;
+}
+
+.faculty-reports-health-card.low
+  .faculty-reports-health-small-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Moderate attendance */
+
+.faculty-reports-health-card.medium {
+  border-left: 4px solid #d97706;
+}
+
+.faculty-reports-health-card.medium
+  .faculty-reports-health-small-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* Excellent attendance */
+
+.faculty-reports-health-card.good {
+  border-left: 4px solid #16a34a;
+}
+
+.faculty-reports-health-card.good
+  .faculty-reports-health-small-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+
+/* =========================================================
+   STUDENTS REQUIRING ATTENTION
+========================================================= */
+
+.faculty-reports-attention-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.faculty-reports-attention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faculty-reports-attention-item {
+  display: grid;
+  grid-template-columns: 36px minmax(180px, 1.2fr) 1.5fr 70px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.faculty-reports-student-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.faculty-reports-attention-student {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.faculty-reports-attention-student strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.faculty-reports-attention-student span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.faculty-reports-attention-bar {
+  width: 100%;
+}
+
+.faculty-reports-attention-bar-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.faculty-reports-attention-bar-track span {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  background: #dc2626;
+}
+
+.faculty-reports-attention-percentage {
+  text-align: right;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   REPORT SECTION SPACING
+========================================================= */
+
+.faculty-reports-section + .faculty-reports-section {
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .faculty-reports-health-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-reports-attention-item {
+    grid-template-columns: 36px 1fr 70px;
+  }
+
+  .faculty-reports-attention-bar {
+    grid-column: 2 / 3;
+  }
+
+  .faculty-reports-attention-percentage {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .faculty-reports-health {
+    padding: 18px;
+  }
+
+  .faculty-reports-attention-item {
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+  }
+
+  .faculty-reports-attention-bar {
+    grid-column: 2;
+  }
+
+  .faculty-reports-attention-percentage {
+    grid-column: 2;
+    grid-row: auto;
+    text-align: left;
+  }
+}
